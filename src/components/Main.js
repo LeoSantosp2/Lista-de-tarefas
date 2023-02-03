@@ -36,11 +36,11 @@ export default class Main extends Component{
 
         if(tarefas.indexOf(novaTarefa) !== -1) return
 
-        const novasTarefas = [... tarefas]
+        const novasTarefas = [...tarefas]
 
         if(index === -1){
             this.setState({
-                tarefas: [... novasTarefas, novaTarefa],
+                tarefas: [...novasTarefas, novaTarefa],
                 novaTarefa: ''
             })
         }
@@ -48,7 +48,7 @@ export default class Main extends Component{
             novasTarefas[index] = novaTarefa
 
             this.setState({
-                tarefas: [... novasTarefas],
+                tarefas: [...novasTarefas],
                 index: -1
             })
         }
@@ -71,11 +71,11 @@ export default class Main extends Component{
 
     handleDelete = (e, index) =>{
         const {tarefas} = this.state
-        const novasTarefas = [... tarefas]
+        const novasTarefas = [...tarefas]
         novasTarefas.splice(index, 1)
 
         this.setState({
-            tarefas: [... novasTarefas]
+            tarefas: [...novasTarefas]
         })
     }
 
